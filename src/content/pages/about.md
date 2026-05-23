@@ -1,37 +1,28 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "Software engineer building toward aerospace systems."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+I'm Stanley Lucas, a software engineer based in Brazil with a passion for space and the technology behind it.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+My long-term goal is to work at SpaceX — not just as a dream, but as a target I'm actively engineering toward. This blog is where I document that journey: every architectural decision, every lesson from building real systems, and every step closer to aerospace-grade software engineering.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+## What I build
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+I focus on data engineering and backend systems — the kind of infrastructure that makes complex systems observable and reliable. My current project is a [Falcon 9 Launch Telemetry Dashboard](https://github.com/stanley-lucas/falcon9-telemetry-dashboard): a full ETL pipeline that collects, processes, and visualizes historical SpaceX launch data.
 
-## Features
+Stack I work with: **Python · FastAPI · PostgreSQL · Docker · Streamlit**
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+## Why this blog
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+Two reasons:
 
-and so much more.
+**Learning in public** — Writing forces clarity. If I can't explain an architectural decision in prose, I don't fully understand it yet. Every post here started as a question I had to answer for myself.
 
-## Show your support
+**Building a track record** — SpaceX hires engineers who can demonstrate judgment, not just code. The decision logs, trade-off analysis, and benchmark posts here are my attempt to show how I think, not just what I can produce.
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+## Get in touch
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+- GitHub: [stanley-lucas](https://github.com/stanley-lucas)
+- LinkedIn: [stanley-lucas-dev](https://www.linkedin.com/in/stanley-lucas-dev/)
+- Twitter/X: [@stanleylucasdev](https://x.com/stanleylucasdev)
