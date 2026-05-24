@@ -1,7 +1,7 @@
 ---
 title: "Why I'm Blogging"
 pubDatetime: 2026-05-23T00:00:00-03:00
-description: "An Air Traffic Controller and software engineer explains why he's writing in public — and what he's building toward."
+description: "An Air Traffic Controller and computer engineer explains why he's writing in public — and what he's building toward."
 featured: true
 tags:
   - meta
