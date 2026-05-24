@@ -4,7 +4,7 @@ export default defineAstroPaperConfig({
   site: {
     url: "https://stanley-lucas.github.io",
     title: "Stanley Lucas",
-    description: "Aerospace & software engineering — building toward SpaceX, one project at a time.",
+    description: "A build log on systems, data engineering, and aerospace software.",
     author: "Stanley Lucas",
     profile: "https://github.com/stanley-lucas",
     ogImage: "default-og.jpg",
