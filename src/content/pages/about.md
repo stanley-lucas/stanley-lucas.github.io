@@ -1,9 +1,9 @@
 ---
 title: "About"
-description: "Software engineer building toward aerospace systems."
+description: "Computer engineer building toward aerospace systems."
 ---
 
-I'm Stanley Lucas, a software engineer based in Brazil with a passion for space and the technology behind it.
+I'm Stanley Lucas, a computer engineer based in Brazil with a passion for space and the technology behind it.
 
 My long-term goal is to work at SpaceX — not just as a dream, but as a target I'm actively engineering toward. This blog is where I document that journey: every architectural decision, every lesson from building real systems, and every step closer to aerospace-grade software engineering.
 
