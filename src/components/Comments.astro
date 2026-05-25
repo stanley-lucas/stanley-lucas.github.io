@@ -1,0 +1,54 @@
+---
+---
+
+<div id="giscus-container" class="mt-8"></div>
+
+<script is:inline data-astro-rerun>
+  (function () {
+    const container = document.getElementById("giscus-container");
+    if (!container) return;
+
+    // Remove any existing Giscus iframe on re-runs (view transitions)
+    container.innerHTML = "";
+
+    const theme =
+      document.documentElement.getAttribute("data-theme") ?? "dark";
+
+    const s = document.createElement("script");
+    s.src = "https://giscus.app/client.js";
+    s.dataset.repo = "stanley-lucas/stanley-lucas.github.io";
+    s.dataset.repoId = "R_kgDOSmFwaA";
+    s.dataset.category = "Blog Comments";
+    s.dataset.categoryId = "DIC_kwDOSmFwaM4C9zv9";
+    s.dataset.mapping = "pathname";
+    s.dataset.strict = "0";
+    s.dataset.reactionsEnabled = "1";
+    s.dataset.emitMetadata = "0";
+    s.dataset.inputPosition = "top";
+    s.dataset.theme = theme;
+    s.dataset.lang = "en";
+    s.crossOrigin = "anonymous";
+    s.async = true;
+    container.appendChild(s);
+
+    function sendTheme(t) {
+      const iframe = document.querySelector("iframe.giscus-frame");
+      if (iframe?.contentWindow) {
+        iframe.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: t } } },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // Watch for AstroPaper theme toggle
+    const observer = new MutationObserver(() => {
+      sendTheme(document.documentElement.getAttribute("data-theme") ?? "dark");
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
