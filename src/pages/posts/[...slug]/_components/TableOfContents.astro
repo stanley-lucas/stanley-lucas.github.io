@@ -1,0 +1,74 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+const filtered = headings.filter(h => h.depth === 2 || h.depth === 3);
+---
+
+{
+  filtered.length > 0 && (
+    <nav id="toc" aria-label="On this page">
+      <p class="text-muted-foreground mb-3 text-xs font-semibold tracking-wider uppercase">
+        On this page
+      </p>
+      <ul class="space-y-1 text-sm">
+        {filtered.map(h => (
+          <li class:list={[{ "pl-3": h.depth === 3 }]}>
+            <a
+              href={`#${h.slug}`}
+              class="toc-link text-muted-foreground hover:text-foreground block py-0.5 transition-colors"
+              data-heading={h.slug}
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+<script is:inline data-astro-rerun>
+  function initToc() {
+    const links = document.querySelectorAll(".toc-link");
+    if (!links.length) return;
+
+    const headingEls = Array.from(links)
+      .map(l => document.getElementById(l.dataset.heading))
+      .filter(Boolean);
+
+    function setActive(id) {
+      links.forEach(l => {
+        const active = l.dataset.heading === id;
+        l.classList.toggle("text-accent", active);
+        l.classList.toggle("font-medium", active);
+        l.classList.toggle("text-muted-foreground", !active);
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+            break;
+          }
+        }
+      },
+      { rootMargin: "0px 0px -80% 0px", threshold: 0 }
+    );
+
+    headingEls.forEach(el => observer.observe(el));
+  }
+
+  initToc();
+  document.addEventListener("astro:after-swap", initToc);
+</script>

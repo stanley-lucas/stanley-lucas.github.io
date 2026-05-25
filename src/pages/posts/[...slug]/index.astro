@@ -11,6 +11,7 @@ import { slugifyStr } from "@/utils/slugify";
 import EditPost from "./_components/EditPost.astro";
 import ShareLinks from "./_components/ShareLinks.astro";
 import Comments from "@/components/Comments.astro";
+import TableOfContents from "./_components/TableOfContents.astro";
 import BackButton from "./_components/BackButton.astro";
 import BackToTopButton from "./_components/BackToTopButton.astro";
 import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
@@ -71,7 +72,7 @@ const {
   hideEditPost,
 } = post.data;
 
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 let ogImageUrl: string | undefined;
 
@@ -132,6 +133,30 @@ const ogImage = ogImageUrl
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
 
+    {
+      headings.some(h => h.depth === 2 || h.depth === 3) && (
+        <details class="xl:hidden my-6 rounded-lg border border-border">
+          <summary class="cursor-pointer px-4 py-3 text-sm font-semibold select-none">
+            On this page
+          </summary>
+          <ul class="px-4 pb-4 pt-1 space-y-1 text-sm">
+            {headings
+              .filter(h => h.depth === 2 || h.depth === 3)
+              .map(h => (
+                <li class:list={[{ "pl-3": h.depth === 3 }]}>
+                  <a
+                    href={`#${h.slug}`}
+                    class="text-muted-foreground hover:text-foreground block py-0.5 transition-colors"
+                  >
+                    {h.text}
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </details>
+      )
+    }
+
     <article
       id="article"
       class:list={[
@@ -161,6 +186,15 @@ const ogImage = ogImageUrl
 
     <AdjacentPostNav {prevPost} {nextPost} />
   </main>
+
+  {
+    headings.some(h => h.depth === 2 || h.depth === 3) && (
+      <aside class="fixed top-24 hidden w-52 max-h-[calc(100vh-8rem)] overflow-y-auto xl:block" style="left: calc(50% + 25rem)">
+        <TableOfContents {headings} />
+      </aside>
+    )
+  }
+
   <Footer />
 </PostLayout>
 
