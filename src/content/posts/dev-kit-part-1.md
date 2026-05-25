@@ -2,7 +2,7 @@
 title: "My AI Dev Kit — Part 1: Building a Personal Claude Code Toolkit"
 pubDatetime: 2026-05-25T13:00:00-03:00
 description: "How I built stanley-dev-kit — a portable Claude Code setup that installs in seconds and keeps every project consistent."
-featured: false
+featured: true
 tags:
   - dev-kit
   - claude-code
