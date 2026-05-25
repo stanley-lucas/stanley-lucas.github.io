@@ -1,6 +1,6 @@
 ![Stanley Lucas](public/github-banner.png)
 
-# My Own Mind
+# Blog
 
 Personal blog about building software at the intersection of aerospace and data engineering — reliability, observability, and the tools that make both possible.
 
