@@ -1,7 +1,7 @@
 ---
 title: "My AI Dev Kit — Part 1: Building a Personal Claude Code Toolkit"
 pubDatetime: 2026-05-25T00:00:00-03:00
-description: "How I built stanley-dev-kit — a portable Claude Code setup that installs in seconds and keeps every project consistent."
+description: "How I built ai-dev-kit — a portable Claude Code setup that installs in seconds and keeps every project consistent."
 featured: true
 tags:
   - dev-kit
@@ -22,7 +22,7 @@ Don't nest more than two levels. Use conventional commits. Don't add abstraction
 
 Every time. New project, same conversation. And even then, Claude would drift — produce something that worked but violated the style I'd spent months refining. Not because it couldn't follow rules. Because the rules weren't written anywhere persistent.
 
-That's the problem I built `stanley-dev-kit` to solve.
+That's the problem I built `ai-dev-kit` to solve.
 
 ## The real pain: code going everywhere
 
@@ -42,7 +42,7 @@ Reading Akita's [Clean Code for AI Agents](https://akitaonrails.com/en/2026/04/2
 
 This isn't "write comments for the AI." It's treat your coding standards as technical infrastructure, not personal preference. If you don't write them down and put them somewhere persistent, you're re-negotiating them every session — and losing ground each time.
 
-The `stanley-dev-kit` is my attempt to make that infrastructure portable, installable, and non-negotiable.
+The `ai-dev-kit` is my attempt to make that infrastructure portable, installable, and non-negotiable.
 
 ## What it is
 
