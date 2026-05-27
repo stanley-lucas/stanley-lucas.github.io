@@ -3,8 +3,6 @@ title: "About"
 description: "Computer engineer with a deep interest in space systems and the engineering behind them."
 ---
 
-# About
-
 I’m Stanley Lucas, an Air Traffic Controller and Computer Engineer based in Brazil, focused on building reliable systems for complex operational environments.
 
 My background combines aviation operations, software engineering, and academic research in physics and astrophysics — experiences that shaped my interest in aerospace systems, real-time infrastructure, and large-scale engineering problems.
@@ -23,7 +21,7 @@ My current work is less about building apps and more about understanding how to 
 
 ---
 
-# Why this blog
+## Why this blog
 
 This blog documents my transition from operational aviation into aerospace-focused engineering.
 
